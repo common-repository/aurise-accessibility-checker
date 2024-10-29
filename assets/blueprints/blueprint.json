@@ -1,0 +1,30 @@
+{
+    "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+    "landingPage": "/",
+    "preferredVersions": {
+        "php": "latest",
+        "wp": "latest"
+    },
+    "phpExtensionBundles": [
+        "kitchen-sink"
+    ],
+    "login": true,
+    "steps": [{
+            "step": "setSiteOptions",
+            "options": {
+                "blogname": "AuRise Demonstration",
+                "blogdescription": "Demonstrating the plugin called AuRise Accessibility Checker"
+            }
+        },
+        {
+            "step": "installPlugin",
+            "pluginZipFile": {
+                "resource": "wordpress.org/plugins",
+                "slug": "aurise-accessibility-checker"
+            },
+            "options": {
+                "activate": true
+            }
+        }
+    ]
+}
